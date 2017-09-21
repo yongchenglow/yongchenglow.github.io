@@ -12,6 +12,8 @@
 		<link href="css/additionalstyles.css" rel="stylesheet">
 		<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+		<script src="js/jquery-3.2.1.js"></script>
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -37,16 +39,18 @@
 				</div>
 				<div class="collapse navbar-collapse" id="mainNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a data-toggle="modal" data-target="#sendMail">Contact</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		
 		<!--Profile-->
-		<header>
+		<header id="profile">
+		<br>
+		<br>
 			<div class="container">
 				<img class="img-circle img-responsive center-block" src="img/YongCheng.jpg" alt="ProfilePicture" width="200" height="200">
 					<div class="text-center">
@@ -55,16 +59,30 @@
 					</div>
 			</div>
 			<br>
-			<br>
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-sm-6">
 						<h4>Career Objective</h4>
-						<h5>To use technology to improve the lives of others</h5>
+						<h5><b>To use technology to improve the lives of others</b></h5>
 					</div>
 					<div class="col-sm-6">
 						<h4>Internship Objective</h4>
-						<h5>To gain relevant working experience in the technological field, and to understand the workflow of a company and how they handle roadblocks</h5>
+						<h5><b>To gain relevant working experience in the technological field, and to understand the workflow of a company and how they handle roadblocks</b></h5>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-4">
+						<h5>Languages</h5>
+						<h6><b>English, Chinese</b></h6>
+					</div>
+					<div class="col-sm-4">
+						<h5>Programming Languages</h5>
+						<h6><b>C, Java, Visual Basic, HTML5, CSS, PHP, SQL, JavaScript, Verilog,</b></h6>
+					</div>
+					<div class="col-sm-4">
+						<h5>Hobbies</h5>
+						<h6><b>Badminton, Basketball, Photography</b></h6>
 					</div>
 				</div>
 			</div>
@@ -72,130 +90,283 @@
 				
 		<!--Portfolio-->
 		<section id="portfolio">
+			<br>
 			<div class="container text-center">
 				<h2>Portfolio</h2>
 				<div class="row">
 					<div class="col-sm-4 informationImage">
 						<img class="img-fluid image" src="img/education.jpg" alt="education" style="width:100%">
 						<div class="middle">
-							<div class="text">Education</div>
+							<button type="button" class="text" data-toggle="modal" data-target="#educationModal">Education</button>
 						</div>
 					</div>
 					<div class="col-sm-4 informationImage">
 						<img class="img-fluid image" src="img/leadership.jpg" alt="education" style="width:100%">
 						<div class="middle">
-							<div class="text">Leadership Experience</div>
+							<button type="button" class="text" data-toggle="modal" data-target="#leadershipModal">Leadership Experience</button>
 						</div>
 					</div>
 					<div class="col-sm-4 informationImage">
 						<img class="img-fluid image" src="img/work.jpg" alt="education" style="width:100%">
 						<div class="middle">
-							<div class="text">Work Experience</div>
+							<button type="button" class="text" data-toggle="modal" data-target="#relaventExperienceModal">Relavent Experience</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		
+		<!-- Modal for Education -->
+		<div id="educationModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;	</button>
+					<h3 class="modal-title">Education</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/Dulwich%20College%20Shanghai.jpg" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>Dulwich College Shanghai</h4>
+							<h5>International General Certificate of Secondary School Education (IGCSE)</h5>
+							<h5><i><b>August 2008 to June 2010</b></i></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/Sha%20Tin%20College.jpg" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>Sha Tin College Hong Kong</h4>
+							<h5>International Baccalaureate (IB)</h5>
+							<h5><i><b>August 2010 to June 2012</b></i></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/NUS.jpg" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>National University of Singapore</h4>
+							<h5>Computer Engineering</h5>
+							<h5><i><b>August 2015 onwards</b></i></h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<!-- Modal for Leadership Experience -->
+		<div id="leadershipModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;	</button>
+					<h3 class="modal-title">Leadership Experience</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/3Guards.JPG" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>Singapore Armed Forces</h4>
+							<h5>3 Guards Machine Gun Commander</h5>
+							<h5>Trainder at the Specialist Cadet School</h5>
+							<h5><i><b>February 2013 to July 2015</b></i></h5>
+							<h6>To Lead, train, provide guidance, and to ensure the safety and welfare of the men in the platoon</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/FOW.jpg" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>NUS School of Computing</h4>
+							<h5>House Head and Orientation Group Leader</h5>
+							<h5><i><b>June 2016 to August 2017</b></i></h5>
+							<h6>In charge of orientation a group of freshmen into NUS School of Computing</h6>
+							<h6>In charge of a group of Orientation Group Leaders</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/ComputingClub.jpg" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>NUS Students' Computing Club 19th Management Committee</h4>
+							<h5>Vice President (Human Resource and Development)</h5>
+							<h5><i><b>September 2016 to October 2017</b></i></h5>
+							<h6>To oversee projects by the Academics, Sports, and Welfare Cells</h6>
+							<h6>The Club's NUSSU Council Representative to influence school wide events</h6>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<!-- Modal for Relavent Experience -->
+		<div id="relaventExperienceModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;	</button>
+					<h3 class="modal-title">Relavant Experience</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/CMR.png" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>CMR Far East</h4>
+							<h5>Orientation Attachment Trainee</h5>
+							<h5><i><b>August 2012 to February 2013</b></i></h5>
+							<h6>Document Control and Data Processing using Excel, VBA</h6>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 padding-top">
+							<img class="img-fluid image" src="img/Orbital.png" alt="education" style="width:100%">
+						</div>
+						<div class="col-sm-8">
+							<h4>National University of Singapore</h4>
+							<h5>Orbital Project</h5>
+							<h5><i><b>May 2016 to August 2016</b></i></h5>
+							<h6>Prototype a website using HTML, CSS, PHP, SQL to provide information about ratings for NUS Modules for Computing Students</h6>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			</div>
+		</div>
 		
 		<!--About-->
 		<section id="about">
+			<br>
 			<div class="container text-center">
 				<h2>About</h2>
 				<div class="row">
-					<div class="col-sm-6">
-						<h4>Career Objective</h4>
-						<h5>To use technology to improve the lives of others</h5>
-					</div>
-					<div class="col-sm-6">
-						<h4>Internship Objective</h4>
-						<h5>To gain relevant working experience in the technological field, and to understand the workflow of a company and how they handle roadblocks</h5>
-					</div>
+					<h5>Hello, welcome to my Personal Webpage. I am currently looking for an intership for my industrial attachment module ATAP. The employment period is from <u>2 Jan to 15 June 2018</u>. To find out more about what is required from the companies please click <a href="http://www.comp.nus.edu.sg/programmes/ug/beyond/atap/org/" target="_blank">here</a> to visit the ATAP webpage.</h5>
 				</div>
-			</div>
-		</section>
-		
-		<!--Contact-->
-		<section id="contact">
-			<div class="container text-center">
-				<h2>Contact</h2>
-					<form class="form-horizontal">
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="pwd">Name:</label>
-							<div class="col-sm-10"> 
-							<input type="name" class="form-control" id="pwd" placeholder="Enter name">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="email">Email:</label>
-							<div class="col-sm-10">
-							<input type="email" class="form-control" id="email" placeholder="Enter email">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-sm-2" for="pwd">Message:</label>
-							<div class="col-sm-10"> 
-							<textarea class="form-control" rows="5" id="comment"></textarea>
-							</div>
-						</div>
-						<div class="form-group"> 
-							<div class="col-sm-12">
-							<div class="checkbox">
-							<label><input type="checkbox"> By Checking this box you give me the consent to contact you through email</label>
-							</div>
-							</div>
-						</div>
-						<div class="form-group"> 
-							<div class="col-sm-12">
-							<button type="submit" class="btn btn-default">Submit</button>
-							</div>
-						</div>
-					</form>
 			</div>
 		</section>
 		
 		<!-- Footer -->
-    <footer class="text-center">
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-              <h3>Contact</h3>
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-envelope"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-github fa-lg"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        
+		<footer class="text-center" id="foot">
+			<br>
+			<div class="footer">
+				<div>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<button class="btn-social btn-outline" data-toggle="modal" data-target="#sendMail" href="#">
+								<i class="fa fa-envelope"></i>
+							</button>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn-social btn-outline" href="https://www.facebook.com/yclow88" target="_blank">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn-social btn-outline" href="https://github.com/yongchenglow" target="_blank">
+								<i class="fa fa-github fa-lg"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn-social btn-outline" href="https://www.linkedin.com/in/yc-low-123087119" target="_blank">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
+						<li>
+							<a class="btn-social btn-outline" href="https://www.instagram.com/yclow88" target="_blank">
+								<i class="fa fa-instagram fa-lg"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="row">
+					Copyright &copy; Low Yong Cheng 2017
+					</div>
+				</div>
+			</div>
+		</footer>
 		
-        <div class="container">
-          <div class="row">
-              Copyright &copy; Low Yong Cheng 2017
-          </div>
-        </div>
-		  </div>
-	</footer>
+		<!-- Modal -->
+		<div id="sendMail" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;	</button>
+					<h3 class="modal-title">Contact Me</h3>
+				</div>
+				<div class="modal-body">
+					<form id="contactMe">
+						<div class="form-group">
+							<label for="Name"><span class="glyphicon glyphicon-user"></span> Name</label>
+							<input type="name" class="form-control" id="pwd" placeholder="Enter name">
+						</div>
+						<div class="form-group">
+							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+							<input type="email" class="form-control" id="pwd" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label for="message"><span class="glyphicon glyphicon-pencil"></span> Message</label>
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+						</div>
+						<div class="form-group"> 
+							<div class="checkbox">
+							<label><input type="checkbox" name="consent"> I agree to give my consent for Low Yong Cheng to email me pertaining the above matter or enquiry (You can only submit if you agree)</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" id="submit" class="btn btn-success btn-default center-block">Submit</button>
+						</div>
+					</form>
+				</div>
+				
+				<script>
+					$(function() {
+						var button = $('#submit');
+						button.attr('disabled', 'disabled');
+						$('#consent').change(function(e)) {
+							if(this.checked){
+								button.removeAttr('disabled');
+							}else{
+									button.attr('disabled', 'disabled');
+							}
+						}
+					});
+				</script>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			</div>
+		</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
