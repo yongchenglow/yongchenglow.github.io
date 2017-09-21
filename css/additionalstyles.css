@@ -1,10 +1,21 @@
 body{
     padding-top: 50px;
+	font-family: verdana;
 }
 
 textarea {
 	resize: vertical;
 	min-height:100px
+}
+
+header{
+	background:url(../img/paperCrop.jpg);
+	background-size: cover;
+}
+
+.board{
+	background:url(../img/tableCrop.jpg);
+	background-size: cover;
 }
 
 .image {
