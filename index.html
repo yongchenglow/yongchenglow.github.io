@@ -326,19 +326,19 @@
 					<form id="contactMe">
 						<div class="form-group">
 							<label for="Name"><span class="glyphicon glyphicon-user"></span> Name</label>
-							<input type="name" class="form-control" id="pwd" placeholder="Enter name">
+							<input type="name" class="form-control" id="name" placeholder="Enter name">
 						</div>
 						<div class="form-group">
 							<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
-							<input type="email" class="form-control" id="pwd" placeholder="Enter email">
+							<input type="email" class="form-control" id="email" placeholder="Enter email">
 						</div>
 						<div class="form-group">
 							<label for="message"><span class="glyphicon glyphicon-pencil"></span> Message</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<textarea class="form-control" rows="5" id="message"></textarea>
 						</div>
 						<div class="form-group"> 
 							<div class="checkbox">
-							<label><input type="checkbox" name="consent"> I agree to give my consent for Low Yong Cheng to email me pertaining the above matter or enquiry (You can only submit if you agree)</label>
+							<label><input type="checkbox" name="consent" id="consent"> I agree to give my consent for Low Yong Cheng to email me pertaining the above matter or enquiry (You can only submit if you agree)</label>
 							</div>
 						</div>
 						<div class="form-group">
@@ -347,18 +347,34 @@
 					</form>
 				</div>
 				
-				<script>
-					$(function() {
+				<script type='text/javascript'>
+					$(document).ready(function() {
 						var button = $('#submit');
 						button.attr('disabled', 'disabled');
-						$('#consent').change(function(e)) {
+						$('#consent').click(function() {
 							if(this.checked){
 								button.removeAttr('disabled');
 							}else{
 									button.attr('disabled', 'disabled');
 							}
+						});
+						
+						$('.field input').keyup(function() {
+						var empty = false;
+						$('.field input').each(function() {
+							if ($(this).val().length == 0) {
+								empty = true;
+							}
+						});
+
+						if (empty) {
+							$('.actions input').attr('disabled', 'disabled');
+						} else {
+							$('.actions input').removeAttr('disabled');
 						}
 					});
+					});
+					
 				</script>
 				
 				<div class="modal-footer">
