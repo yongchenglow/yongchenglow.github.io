@@ -1,12 +1,18 @@
 {
   "main": {
-    "name":"Tim Baker",
-    "occupation":"(Your Occupation Here)",
-    "description":"Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
+    "name":"Yong Cheng Low",
+    "occupation":"Frontend Web Developer",
+    "description":"I aspire to use modern day technologies to improve the lives of others and give users the best possible user interface and user experience",
     "image":"profilepic.jpg",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+    "bio":{
+      "para1":"Hello everyone, I am Yong Cheng or my friends call me YC for short. I studied at the National University of Singapore and I minor in Interactive Media Design. I hope to use technology to improve the efficiency of the workforce and ensuring that employees or clients get the best possible user experience and user interface.",
+      "para2":"Some of my works include generation of material list given a particular specification of a circuit board at CMR Far East. I also interned at Cudy, and edutech startup who tried to transform the educational industry through online tuition. During my time there, I was given the opportunity to design the user interfaces and enhance the user experience of the payment gateway using Xfers and live streaming using Temasys.",
+      "para3":"I also have a passion for sports and organising events to benefit others. During my pre-tertiary education, I was part of the school team for Badminton and Basketball. I joined the NUS Students' Computing Club as Vice President (Human Resources & Student Development) to create a vibrant campus life for NUS Computing students. During my final year of University, I decided to go out of my comfort zone to take up Presidency at NUS Students' Sports Club to influence the entire sporting scene in NUS. I was given the opportunity to work with students, and various companies who were interested in recreational sports such as ActiveSG, HPB, People's Association, FBT, The Tea Party etc.",
+      "para4":"Find me interesting? Send me an email and let's chat"
+    },
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
-    "email": "youremailhere@gmail.com",
+    "email": "lowyongcheng@hotmail.com",
+    "country": "Singapore",
     "phone": "555-555-5555",
     "address":{
       "street":"(Your Street)",
@@ -15,42 +21,32 @@
       "zip": "(Your Zip/Postal Code)"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"http://timbakerdev.com",
+    "resumedownload":"/documents/YC CV.pdf",
     "social":[
       {
         "name":"facebook",
-        "url":"http://facebook.com/tim.baker.906",
-        "className":"fa fa-facebook"
-      },
-      {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
-      },
-      {
-        "name":"google-plus",
-        "url":"http://googleplus.com/tbakerx",
-        "className":"fa fa-google-plus"
+        "url":"https://www.facebook.com/yclow88",
+        "className":["fab","facebook"]
       },
       {
         "name":"linkedin",
-        "url":"https://www.linkedin.com/in/tim-baker-8420009a/",
-        "className":"fa fa-linkedin"
+        "url":"https://www.linkedin.com/in/yong-cheng-low",
+        "className":["fab","linkedin"]
       },
       {
         "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
+        "url":"https://www.instagram.com/yclow88",
+        "className":["fab","instagram"]
       },
       {
         "name":"github",
-        "url":"http://github.com/tbakerx",
-        "className":"fa fa-github"
+        "url":"https://github.com/yongchenglow",
+        "className":["fab","github"]
       },
       {
         "name":"skype",
-        "url":"http://skype.com",
-        "className":"fa fa-skype"
+        "url":"skype:lowyongcheng_1?add",
+        "className":["fab","skype"]
       }
     ]
   },

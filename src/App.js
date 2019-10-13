@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
+
+// Fontawesome
+import ReactDOM from 'react-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebook, faLinkedin, faInstagram, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
@@ -9,6 +16,8 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
+
+library.add(faFacebook, faLinkedin, faInstagram, faGithub, faSkype, faCoffee);
 
 class App extends Component {
 
