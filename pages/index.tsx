@@ -1,11 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head";
+import Image from "next/image";
 
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
     </Head>
 
     <main>
@@ -19,7 +27,7 @@ export const Home = (): JSX.Element => (
 
       <button
         onClick={() => {
-          window.alert('With typescript and Jest')
+          window.alert("With typescript and Jest");
         }}
       >
         Test Button
@@ -60,8 +68,8 @@ export const Home = (): JSX.Element => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
-        <Image src="/vercel.svg" alt="Vercel Logo" height={'32'} width={'64'} />
+        Powered by{" "}
+        <Image src="/vercel.svg" alt="Vercel Logo" height={"32"} width={"64"} />
       </a>
     </footer>
 
@@ -206,6 +214,6 @@ export const Home = (): JSX.Element => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
