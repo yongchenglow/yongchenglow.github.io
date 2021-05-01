@@ -13,8 +13,9 @@ This repository contains the code for Yong Cheng Low's Website. It is coded usin
 2. [File Structure](#file-structure)
 3. [Testing](#testing)
 4. [VSCode](#vscode)
-5. [Acknowledgements](#acknowledgements)
-6. [License](#license)
+5. [Dependencies](#dependencies)
+6. [Acknowledgements](#acknowledgements)
+7. [License](#license)
 
 ## Running the Application on your Computer
 
@@ -141,6 +142,24 @@ To ensure the the Prettier Code formatter used is formated when you save, please
     "source.fixAll": true
   }
 ```
+
+## Dependencies
+
+Dependency Pinning is used in package.json. This is to ensure that
+
+1. Application depencies are known and vulnerbilities are handled properly
+2. Application can be runned when downloaded
+3. In accordance with OWASP [Dependency Management](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html)
+
+TLDR on the pinning of dependencies
+
+```
+"foobar": "^1.1.0" = "any foobar version greater than or equal to 1.1.0 but less than 2"
+"foobar": "~1.1.0" = "any foobar version greater than or equal to 1.1.0 but less than 1.2"
+"foobar": "1.1.0" = "use only foobar version 1.1.0 and no other"
+```
+
+To understand more about depency pinning please refer to the following [article](https://docs.renovatebot.com/dependency-pinning/).
 
 ## Acknowledgements
 
