@@ -1,5 +1,5 @@
 import "./navbar.module.scss";
 
-export const Navbar = (): JSX.Element => <div className="container"></div>;
+export const Navbar = (): JSX.Element => <div></div>;
 
 export default Navbar;

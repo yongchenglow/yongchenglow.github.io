@@ -9,6 +9,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "jpoissonnier.vscode-styled-components",
+    "aaron-bond.better-comments",
     "pkief.material-icon-theme"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
