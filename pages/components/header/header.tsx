@@ -21,9 +21,29 @@ export const Header = (): JSX.Element => (
       }}
     />
 
+    {/* For SEO */}
     <title>Yong Cheng Low</title>
+    <link rel="icon" href="images/YongCheng.jpg" />
+    <meta name="author" content="Yong Cheng Low" />
+    <meta
+      name="description"
+      content="Hi, I am Yong Cheng, also known as YC, welcome to my site!"
+    />
+    <meta
+      name="keywords"
+      content="Yong Cheng Low, Singapore, Software Engineer, Web Developer, Sports Enthusiast"
+    />
 
-    <link rel="icon" href="/favicon.ico" />
+    {/* For Social Media */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yongchenglow.github.io" />
+    <meta property="og:image" content="images/YongCheng.jpg" />
+    <meta property="og:title" content="Yong Cheng Low" />
+    <meta
+      property="og:description"
+      content="Hi, I am Yong Cheng, also known as YC, welcome to my site!"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
