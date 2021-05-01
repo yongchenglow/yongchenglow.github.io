@@ -1,4 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# After adding please run git rm --cached `git ls-files -i --exclude-from=.gitignore`
+# If the above command does not work git ls-files -i --exclude-from=.gitignore | xargs git rm --cached  
 
 # dependencies
 /node_modules
