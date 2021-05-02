@@ -14,8 +14,9 @@ This repository contains the code for Yong Cheng Low's Website. It is coded usin
 3. [Testing](#testing)
 4. [VSCode](#vscode)
 5. [Dependencies](#dependencies)
-6. [Acknowledgements](#acknowledgements)
-7. [License](#license)
+6. [Rendering](#rendering)
+7. [Acknowledgements](#acknowledgements)
+8. [License](#license)
 
 ## Running the Application on your Computer
 
@@ -160,6 +161,18 @@ TLDR on the pinning of dependencies
 ```
 
 To understand more about depency pinning please refer to the following [article](https://docs.renovatebot.com/dependency-pinning/).
+
+## Dependencies
+
+This website is created using Pre-Rending, it is built as a client side application but will eventually incorportate server side elements such as blog post.
+
+TLDR
+
+1. Client-Side is rending all the HTML CSS on the client
+2. Server-Side is rending on the server and then pass it to the client
+3. Pre-Rending is the best out of both worlds
+
+Find out more about the differnt types of rendering and their pros and cons [here](https://itnext.io/client-side-rendering-vs-server-side-rendering-vs-pre-rendering-5d5962221925)
 
 ## Acknowledgements
 
