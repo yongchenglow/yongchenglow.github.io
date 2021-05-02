@@ -23,7 +23,7 @@ export const Header = (): JSX.Element => (
 
     {/* For SEO */}
     <title>Yong Cheng Low</title>
-    <link rel="icon" href="images/YongCheng.jpg" />
+    <link rel="icon" href="images/common/YongCheng.jpg" />
     <meta name="author" content="Yong Cheng Low" />
     <meta
       name="description"
@@ -37,7 +37,7 @@ export const Header = (): JSX.Element => (
     {/* For Social Media */}
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yongchenglow.github.io" />
-    <meta property="og:image" content="images/YongCheng.jpg" />
+    <meta property="og:image" content="images/common/YongCheng.jpg" />
     <meta property="og:title" content="Yong Cheng Low" />
     <meta
       property="og:description"

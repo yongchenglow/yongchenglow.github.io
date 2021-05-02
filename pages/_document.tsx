@@ -1,14 +1,21 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import Header from "./components/header/header";
-import Navbar from "./components/navbar/navbar";
-import Body from "./components/body/body";
-import Footer from "./components/footer/footer";
+import Document, {
+  DocumentContext,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "next/document";
 
 export default class MyDocument extends Document {
-  render(): JSX.Element {
+  // static async getInitialProps(ctx) {
+  //   const initialProps = await Document.getInitialProps(ctx);
+  //   return { ...initialProps };
+  // }
+
+  render() {
     return (
       <Html>
-        <Header />
+        <Head />
         <body>
           <Main />
           <NextScript />

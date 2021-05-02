@@ -1,6 +1,6 @@
 import "./body.module.scss";
 
-export const Body = (): JSX.Element => (
+export const Body = (props): JSX.Element => (
   <div>
     <main>
       <h1 className="title">
@@ -11,13 +11,7 @@ export const Body = (): JSX.Element => (
         Get started by editing <code>pages/index.tsx</code>
       </p>
 
-      <button
-        onClick={() => {
-          window.alert("With typescript and Jest");
-        }}
-      >
-        Test Button
-      </button>
+      <button onClick={() => props.handleThemeChange}>Test Button</button>
 
       <div className="grid">
         <a href="https://nextjs.org/docs" className="card">
