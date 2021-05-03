@@ -1,6 +1,6 @@
-import "./body.module.scss";
+import "./home.module.scss";
 
-export const Body = (props): JSX.Element => (
+export const Home = (props): JSX.Element => (
   <div>
     <main>
       <h1 className="title">
@@ -44,4 +44,4 @@ export const Body = (props): JSX.Element => (
   </div>
 );
 
-export default Body;
+export default Home;

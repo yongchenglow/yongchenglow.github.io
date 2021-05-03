@@ -1,14 +1,9 @@
-import { AppProps } from "next/app";
 import React, { useEffect } from "react";
-import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Header from "./components/header/header";
 import "../styles/global.scss";
+import SiteLayout from "../components/SiteLayout";
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => {
-  const router = useRouter();
-
+const MyApp = ({ Component, pageProps, router }) => {
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
       /* invoke analytics function only for production */
@@ -20,14 +15,12 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     };
   }, [router.events]);
   // eslint-disable-next-line react/jsx-props-no-spreading
+
   return (
-    <React.Fragment>
-      <Header />
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-      <CssBaseline />
+    <SiteLayout>
       <Component {...pageProps} />
-    </React.Fragment>
+    </SiteLayout>
   );
 };
 
-export default App;
+export default MyApp;

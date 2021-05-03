@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { GA_TRACKING_ID } from "../../../lib/gtag";
+import { GA_TRACKING_ID } from "../../lib/gtag";
 
-export const Header = (): JSX.Element => (
+export const Header = () => (
   <Head>
     {/* Global site tag (gtag.js) - Google Analytics */}
     <script
